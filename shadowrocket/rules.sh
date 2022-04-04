@@ -7,11 +7,13 @@ EOF
 curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/direct.txt' -o direct.txt
 curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/gfw.txt' -o proxy.txt
 curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/apple.txt' -o apple-cn.txt
+curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/icloud.txt' -o icloud.txt
 curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/private.txt' -o private.txt
 
 sed 's/$/,DIRECT/g' direct.txt >> my-rules.txt
 sed 's/$/,PROXY/g' proxy.txt >> my-rules.txt
 sed 's/$/,DIRECT/g' apple-cn.txt >> my-rules.txt
+sed 's/$/,DIRECT/g' icloud.txt >> my-rules.txt
 sed 's/$/,DIRECT/g' private.txt >> my-rules.txt
 
 cat >> my-rules.txt <<EOF
