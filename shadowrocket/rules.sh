@@ -4,10 +4,10 @@ cat > my-rules.txt <<EOF
 [Rule]
 EOF
 
-#curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/direct.txt' -o direct.txt
-#curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/proxy.txt' -o proxy.txt
-#curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/apple.txt' -o apple-cn.txt
-#curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/private.txt' -o private.txt
+curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/direct.txt' -o direct.txt
+curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/gfw.txt' -o proxy.txt
+curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/apple.txt' -o apple-cn.txt
+curl 'https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/private.txt' -o private.txt
 
 sed 's/$/,DIRECT/g' direct.txt >> my-rules.txt
 sed 's/$/,PROXY/g' proxy.txt >> my-rules.txt
